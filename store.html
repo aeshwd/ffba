@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast N Furious Online Store</title>
+    <link rel="stylesheet" href="store.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1>Fast N Furious Online Store</h1>
+        <p>Gear Up Like a Champion!</p>
+    </header>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <h2>Shop by Category</h2>
+        <div class="category-list">
+            <button class="category" onclick="filterProducts('merchandise')">
+                <img src="images/merchantise.jpg" alt="Merchandise">
+                <h3>Merchandise</h3>
+            </button>
+            <button class="category" onclick="filterProducts('equipment')">
+                <img src="images/equipments.jpg" alt="Equipment">
+                <h3>Badminton Equipments</h3>
+            </button>
+            <button class="category" onclick="filterProducts('accessories')">
+                <img src="images/shoes.jpg" alt="Accessories">
+                <h3>Badminton Shoes</h3>
+            </button>
+            <button class="category" onclick="filterProducts('all')">
+                <img src="images/all.jpg" alt="All Products">
+                <h3>All Products</h3>
+            </button>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="products">
+        <h2>Products</h2>
+        <div class="product-list" id="product-list">
+            <!-- Merchandise -->
+            <div class="product merchandise">
+                <img src="images/ffba shirts.png" alt="T-Shirt">
+                <h3>Academy T-Shirt</h3>
+                <p>Price: ₹700</p>
+                <button onclick="showCustomAlert()">Get Enquiry</button>
+            </div>
+            <div class="product merchandise">
+                <img src="images/ffba hoodies.png" alt="Hoodie">
+                <h3>Academy Hoodie</h3>
+                <p>Price: ₹1,500</p>
+                <button onclick="showCustomAlert()">Get Enquiry</button>
+            </div>
+
+            <!-- Equipment -->
+            <div class="product equipment">
+                <img src="images/attack 9.jpg" alt="Badminton Racket">
+                <h3>Yonex Badminton Astrox Attack 9 Racket</h3>
+                <p>Price: ₹1,500</p>
+                <button onclick="showCustomAlert()">Get Enquiry</button>
+            </div>
+            <div class="product equipment">
+                <img src="images/as 2.jpg" alt="Shuttlecock">
+                <h3>Yonex AS 2 Feather Shuttlecock</h3>
+                <p>Price: ₹2,200</p>
+                <button onclick="showCustomAlert()">Get Enquiry</button>
+            </div>
+
+            <div class="product equipment">
+                <img src="images/mavis.jpg" alt="Shuttlecock">
+                <h3>Yonex Mavis 350 Plastic Shuttlecock</h3>
+                <p>Price: ₹1,200</p>
+                <button onclick="showCustomAlert()">Get Enquiry</button>
+            </div>
+
+            <!-- Accessories -->
+            <div class="product accessories">
+                
+                <img src="images/nivia1.jpg" alt="Badminton Shoes">
+                <h3>Nivia HY-COURT Non-Marking Yellow</h3>
+                <p>Price: ₹1,600</p>
+                <button onclick="showCustomAlert()">Get Enquiry</button>
+                <p>Different colours are available.</p>
+            </div>
+
+            <div class="product accessories">
+                <img src="images/nivianew.jpeg" alt="Badminton Shoes">
+                <div class="badge">Latest</div> <!-- Badge added -->
+                <h3>Nivia HY-COURT New Non-Marking Yellow</h3>
+                <p>Price: ₹2,100</p>
+                <button onclick="showCustomAlert()">Get Enquiry</button>
+                <p>Different colours are available.</p>
+            </div>
+
+            <div class="product accessories">
+                <img src="images/nivia2.jpg" alt="Badminton Shoes">
+                <h3>Nivia Energy Men's Red Mesh Tennis Shoes</h3>
+                <p>Price: ₹1,250</p>
+                <button onclick="showCustomAlert()">Get Enquiry</button>
+                <p>Different colours are available.</p>
+            </div>
+
+            <div class="product accessories">
+                <img src="images/nivia3.jpg" alt="Badminton Shoes">
+                <h3>Nivia Hy-Court 2.0 Badminton Shoes (White)</h3>
+                <p>Price: ₹1,600</p>
+                <button onclick="showCustomAlert()">Get Enquiry</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Alert Modal -->
+    <div class="alert-modal" id="alert-modal">
+        <div class="alert-box">
+            <img src="images/logo.png"  width="100">
+            <h2>Thank You for Shopping!</h2>
+            <p>To get the product details or to buy this product, please call:</p>
+            <p><strong>+91 9149429397 , +91 6006015291</strong></p>
+            <p>or email:</p>
+            <p><a href="mailto:fastnfuriousacademy@gmail.com">fastnfuriousacademy@gmail.com</a></p>
+            <button class="close-btn" onclick="closeCustomAlert()">Close</button>
+        </div>
+    </div>
+
+    <div class="back">
+
+        <a href="/ffba/main.html"><button>Go Back</button></a>  </div>
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p style="line-height: 1.5;">Contact us at <a href="mailto:fastnfuriousacademy@gmail.com" style="text-decoration: none; color: yellow;">fastnfuriousacademy@gmail.com</a> or call +91 9149429397</p>
+        <p>© 2025 Fast N Furious Badminton Academy</p>
+    </footer>
+
+    <script src="store.js"></script>
+</body>
+</html>
