@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Preloader */
+.preloader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 100;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+
+.preloader .fade-out{
+    opacity: 0;
+    transition: opacity 4s ease;
+}
+
+/* Navbar Section */
+
+.navbar{
+	padding: 20px 20px;
+}
+
+.bar img{
+    width: 70px;
+}
+
+.bar{
+	background-color: rgb(1, 93, 1);
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 20px;
+	align-items: center;
+}
+
+.bar ul{
+	display: flex;
+	justify-content: flex-end;
+	gap: 30px;
+}
+
+
+.bar ul a{
+	text-decoration: none;
+	position: relative;
+}
+
+.bar ul a li{
+	list-style: none;
+	font-size: 1.1rem;
+	color: white;
+	font-family: sans-serif;
+}
+
+.bar ul a::before{
+   content: "";
+   position: absolute;
+   bottom: -4px;
+   background-color: white;
+   height: 4px;
+   width: 100%;
+   border-radius: 50px;
+   transform: scale(0);
+   transition: transform 0.2s linear;
+}
+
+.bar ul a:hover::before{
+	transform: scale(1);
+}
+
+.bar button{
+	border: none;
+	outline: none;
+	font-size: 1.2rem;
+	font-family: sans-serif;
+	padding: 5px 10px;
+	border-radius: 5px;
+	color: green;
+	transition: 0.4s ease-in-out;
+}
+
+.bar button:hover{
+	background-color: black;
+	color: white;
+}
+
+.sidebar{
+	position: fixed;
+	top: 0;
+	height: 100vh;
+	width: 250px;
+	z-index: 999;
+	right: 0;
+	background-color: green;
+	display: none;
+	flex-direction: column;
+}
+
+.sidebar i{
+	font-size: 3rem;
+	color: white;
+	cursor: pointer;
+}
+
+.sidebar ul{
+	display: flex;
+	flex-direction: column;
+    align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.menu-btn{
+	display: none;
+}
+
+.sidebar li{
+	width: 100%;
+}
+
+@media (max-width: 990px) {
+	.hideonMobile{
+		display: none;
+	}
+
+	.menu-btn{
+		display: block;
+	}
+
+	.sidebar{
+		width: 100%;
+	}
+}
+
+@media (max-width: 375px) {
+	.menu-btn{
+	  font-size: 1.7rem;
+	}
+
+	.bar img{
+        width: 40px;
+    }
+}
+
+/* About Section */
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #ffcc00;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Coaches Section */
+.coaches-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.coach-card {
+    background-color: #fff;
+    width: 300px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.coach-card:hover {
+    transform: scale(1.05);
+}
+
+.coach-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: #ffcc00;
+    margin-bottom: 0.5rem;
+}
+
+.coach-bio {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .coaches-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Footer Section */
+
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    gap: 20px;
+    background-color: black;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.foot{
+    width: 300px;
+}
+
+.foot-box1 img{
+    width: 200px;
+}
+
+.foot-box1{
+    text-align: center;
+    padding: 10px;
+}
+
+.foot-box2{
+    text-align: center;
+    padding: 10px;
+}
+
+.foot-box2 h3{
+    font-family: sans-serif;
+    font-size: 1.4rem;
+    padding-bottom: 30px;
+    color: white;
+}
+
+.foot-box2 li{
+    list-style: none;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    font-family: sans-serif;
+    transition: 0.4s ease-in-out;
+}
+
+.foot-box2 a{
+    text-decoration: none;
+    color: rgb(179, 175, 175);
+}
+
+.foot-box2 li:hover{
+    transform: scale(1.2);
+}
+
+
+/* Sub Footer Section */
+
+
+.sub-footer{
+    background-color: rgb(63, 58, 58);
+}
+.copy{
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 30px;
+    color: white;
+}
+
+.made{
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    color: white;
+}
+
+

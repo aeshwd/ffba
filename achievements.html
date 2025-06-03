@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Achievements - Fast N Furious Badminton Academy</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #38bdf8;
+    }
+
+    header p {
+      margin: 5px 0 10px;
+    }
+
+    .back-button {
+      
+      top: 20px;
+      left: 20px;
+      background: #38bdf8;
+      color: #0f172a;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .back-button:hover {
+      background: #0ea5e9;
+    }
+
+    .timeline {
+      max-width: 1100px;
+      margin: auto;
+      padding: 50px 20px;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      height: 100%;
+      width: 4px;
+      background: #38bdf8;
+      transform: translateX(-50%);
+    }
+
+    .event {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      position: relative;
+      width: 50%;
+      padding: 20px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s ease;
+    }
+
+    .event-right {
+      align-items: flex-start;
+      left: 50%;
+    }
+
+    .event.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .event-content {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 350px;
+    }
+
+    .event-content img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 100%;
+      border: 3px solid #38bdf8;
+      margin-bottom: 15px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .event-content img:hover {
+      transform: scale(1.05);
+    }
+
+    .year {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #38bdf8;
+      margin-bottom: 5px;
+    }
+
+    .name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* Fullscreen Modal */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(15, 23, 42, 0.95);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .modal img {
+      max-width: 90%;
+      max-height: 80%;
+      border: 5px solid #38bdf8;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      font-size: 2rem;
+      background: #38bdf8;
+      color: #0f172a;
+      padding: 8px 16px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .close-btn:hover {
+      background: #0ea5e9;
+    }
+
+    @media screen and (max-width: 768px) {
+      .timeline::before {
+        left: 10px;
+      }
+
+      .event {
+        width: 100%;
+        padding-left: 30px;
+        align-items: flex-start;
+      }
+
+      .event-right {
+        left: 0;
+      }
+
+      .event-content {
+        max-width: 100%;
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .event-content img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <button class="back-button" onclick="window.location.href='main.html'">← Go Back</button>
+    <h1>🏸 Academy Achievements</h1>
+    <p>Fast N Furious Badminton Academy</p>
+  </header>
+
+  <div class="timeline">
+    <!-- Event 1 -->
+    <div class="event">
+      <div class="event-content">
+        <img src="images/blessy.jpeg" alt="Player 1">
+        <div class="year">2024</div>
+        <div class="name">Blessy</div>
+        <div class="description">Quarterfinalist in Under 11 Punjab State in just one Year</div>
+      </div>
+    </div>
+
+    <!-- Event 2 -->
+    <div class="event event-right">
+      <div class="event-content">
+        <img src="images/WhatsApp Image 2024-10-11 at 21.24.13_4d846008.jpg" alt="Player 2">
+        <div class="year">2024</div>
+        <div class="name">Snowy Goswami</div>
+        <div class="description">CBSE under 19 national badminton championship - One gold in individual.</div>
+      </div>
+    </div>
+
+    <!-- Event 3 -->
+    <div class="event">
+      <div class="event-content">
+        <img src="images/blessy.jpeg" alt="Player 3">
+        <div class="year">2024</div>
+        <div class="name">Navpreet Kaur</div>
+        <div class="description">Silver Medal in 40-50 age group Women Category in Kheda Punjab State. Gold Medal in District Bathinda</div>
+      </div>
+    </div>
+
+     <!-- Event 4 -->
+    <div class="event event-right">
+      <div class="event-content">
+        <img src="images/blessy.jpg" alt="Player 4">
+        <div class="year">2024</div>
+        <div class="name">Bhavya</div>
+        <div class="description">Gold medal in U-11 School Games
+      </div>
+    </div>
+
+    </div>
+
+     <!-- Event 4 -->
+    <div class="event">
+      <div class="event-content">
+        <img src="images/boy.png" alt="Player 4">
+        <div class="year">2024</div>
+        <div class="name">Aryan</div>
+        <div class="description">Gold Medalist in U-11 School Games</div>
+      </div>
+    </div>
+
+
+     <!-- Event 4 -->
+    <div class="event event-right">
+      <div class="event-content">
+        <img src="images/blessy.jpeg" alt="Player 4">
+        <div class="year">2024</div>
+        <div class="name">Kashika</div>
+        <div class="description">Gold Medalist in Bathinda District U-13</div>
+      </div>
+    </div>
+    <!-- Event 4 -->
+    <div class="event">
+      <div class="event-content">
+        <img src="images/blessy.jpg" alt="Player 4">
+        <div class="year">2025</div>
+        <div class="name">Blessy</div>
+        <div class="description">Silver Medal in U-11 Punjab Badminton Ranking (Jalandhar).</div>
+      </div>
+    </div>
+
+    <!-- Event 5 -->
+    <div class="event event-right">
+      <div class="event-content">
+        <img src="images/BL.jpg" alt="Player 5">
+        <div class="year">2025</div>
+        <div class="name">Blessy</div>
+        <div class="description">Punjab Rank 2 in U-11 Mini Badminton Girls Singles and Rank 4 in U-13 Girls Singles</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fullscreen Image Modal -->
+  <div class="modal" id="imageModal">
+    <span class="close-btn" onclick="closeModal()">×</span>
+    <img id="modalImage" src="" alt="Zoomed Image" />
+  </div>
+
+  <script>
+    const events = document.querySelectorAll('.event');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    events.forEach(event => observer.observe(event));
+
+    // Modal Logic
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+
+    document.querySelectorAll('.event-content img').forEach(img => {
+      img.addEventListener('click', () => {
+        modal.style.display = "flex";
+        modalImage.src = img.src;
+        modalImage.alt = img.alt;
+      });
+    });
+
+    function closeModal() {
+      modal.style.display = "none";
+      modalImage.src = "";
+    }
+  </script>
+
+</body>
+</html>
