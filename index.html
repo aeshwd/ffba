@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast N Furious Badminton Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="lock-scroll splash-view">
+
+    <div id="splash-window">
+        <div class="video-frame">
+            <video autoplay loop playsinline id="splash-video">
+                <source src="images/Video Project.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        
+        <div class="splash-interface">
+            <div class="brand-reveal">
+                <h1 class="splash-logo">FAST<span class="x-slash"><i>N</i></span>FURIOUS</h1>
+                <div class="accent-bar"></div>
+            </div>
+            <p class="splash-tagline">Smash Your Limits. Rule The Court.</p>
+            <button id="enter-btn" class="btn-action-premium">
+                <span>ENTER ARENA</span>
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("enter-btn").addEventListener("click", () => {
+            const windowFrame = document.getElementById("splash-window");
+            windowFrame.classList.add("exit-viewport");
+            
+            // Wait for the scale/fade animation to finish before jumping files
+            setTimeout(() => {
+                window.location.href = "main.html";
+            }, 600);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena | Fast N Furious Badminton Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .btn-admin-login {
+  background-color: #0077b6;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-admin-login:hover {
+  background-color: #005f93;
+}
+    </style>
+</head>
+<body class="main-app-fade-in">
+    
+    <header class="global-header">
+        <div class="header-container">
+            <a href="#home" class="logo">FFBA<span class="dot">.</span></a>
+            
+            <nav class="main-nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#programs" class="nav-link">Programs</a>
+                <a href="#coaches" class="nav-link">Coaches</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <!-- Add this button where you want it on your current website -->
+<button class="btn-admin-login" onclick="window.open('admin.html', '_blank')">
+  Admin Login
+</button>
+            </nav>
+
+            <div class="header-actions">
+              <a href="#contact">  <button class="btn-cta-nav">JOIN NOW</button> </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu" id="menuToggle">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-drawer" id="mobileDrawer">
+        <nav class="mobile-nav-links">
+            <a href="#home" class="mobile-nav-link">Home</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#programs" class="mobile-nav-link">Programs</a>
+            <a href="#coaches" class="mobile-nav-link">Coaches</a>
+            <a href="#gallery" class="mobile-nav-link">Gallery</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+            <!-- Add this button where you want it on your current website -->
+<button class="btn-admin-login" onclick="window.open('admin.html', '_blank')">
+  Admin Login
+</button>
+         <a href="#contact">  <button class="btn-drawer-cta">JOIN NOW</button> </a> 
+        </nav>
+    </div>
+
+    <main id="view-port">
+        
+        <section id="home" class="hero-slider-section">
+            
+            <div class="ticker-wrap">
+                <div class="ticker">
+                    <div class="ticker-item"><i class="fa-solid fa-fire"></i> Admissions open for Summer Pro Batch 2026!</div>
+                    <div class="ticker-item"><i class="fa-solid fa-trophy"></i> FFBA players sweep State Championship medals!</div>
+                    <div class="ticker-item"><i class="fa-solid fa-star"></i> Special Weekend Masterclass coming soon.</div>
+                </div>
+            </div>
+
+            <div class="slider-container">
+                <div class="slide active">
+                    <div class="slide-bg-media">
+                        <img src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?q=80&w=1920" alt="Badminton Action">
+                        <div class="slide-overlay"></div>
+                    </div>
+                    <div class="slide-content">
+                        <h2 class="slide-slogan">SMASH YOUR <span class="highlight">LIMITS</span></h2>
+                        <p class="slide-subtext">Train under elite certified professionals in an Olympic-standard ecosystem.</p>
+                        <a href="#contact" class="btn-hero-action">JOIN THE CLUB <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-bg-media">
+                        <img src="https://images.unsplash.com/photo-1521537634581-0dced2fee2ef?q=80&w=1920" alt="Badminton Court">
+                        <div class="slide-overlay"></div>
+                    </div>
+                    <div class="slide-content">
+                        <h2 class="slide-slogan">RULE THE <span class="highlight">COURT</span></h2>
+                        <p class="slide-subtext">Advanced tracking, sports analytics, and aggressive physical conditioning blueprints.</p>
+                        <a href="#contact" class="btn-hero-action">EXPLORE BATCHES <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-arrows">
+                <button class="slider-arrow prev-arrow"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="slider-arrow next-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <div class="slider-dots">
+                <span class="dot-indicator active" data-index="0"></span>
+                <span class="dot-indicator" data-index="1"></span>
+            </div>
+
+            <div class="hero-dashboard">
+                <div class="dashboard-grid">
+                    
+                    <div class="stats-container">
+                        <div class="stat-box">
+                            <span class="stat-number" data-target="35">0</span><span class="stat-plus">+</span>
+                            <p class="stat-label">Active Players</p>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number" data-target="2">0</span><span class="stat-plus">+</span>
+                            <p class="stat-label">Elite Coaches</p>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number" data-target="23">0</span><span class="stat-plus">+</span>
+                            <p class="stat-label">Events Hosted</p>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number" data-target="120">0</span><span class="stat-plus">+</span>
+                            <p class="stat-label">Medals Won</p>
+                        </div>
+                    </div>
+
+                    <div class="countdown-container">
+                        <div class="countdown-title">
+                            <span class="live-pulse"></span> NEXT MAJOR TOURNAMENT
+                        </div>
+                        <div class="countdown-timer" id="countdown">
+                            <div class="time-block"><span id="days">00</span><p>Days</p></div>
+                            <div class="time-block"><span id="hours">00</span><p>Hrs</p></div>
+                            <div class="time-block"><span id="minutes">00</span><p>Min</p></div>
+                            <div class="time-block"><span id="seconds">00</span><p>Sec</p></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+    <!-- 👨‍🏫 ABOUT ACADEMY SECTION -->
+<section id="about" class="section-about">
+    <div class="section-container">
+        
+        <!-- Section Title Wrapper -->
+        <div class="section-header">
+            <span class="sub-heading">// ESTABLISHED 2023</span>
+            <h2 class="display-heading">THE LEGACY OF <span class="highlight">SPEED</span></h2>
+            <div class="heading-separator"></div>
+        </div>
+
+        <!-- Asymmetric Intro Layout -->
+        <div class="about-hero-grid">
+            <div class="about-text-block">
+                <h3>Forging Champions. Breaking Records.</h3>
+                <p>Founded three years ago with a single court and an uncompromising vision, Fast N Furious Badminton Academy has quickly evolved into a premier high-performance training hub. We bridge the gap between passion and professional sports science.</p>
+                
+                <div class="strategic-cards">
+                    <div class="strat-card">
+                        <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
+                        <h4>OUR MISSION</h4>
+                        <p>To systematically identify, incubate, and elevate grassroots badminton talent into podium-winning national athletes.</p>
+                    </div>
+                    <div class="strat-card">
+                        <div class="card-icon"><i class="fa-solid fa-eye"></i></div>
+                        <h4>OUR VISION</h4>
+                        <p>To build a world-class Olympic-standard ecosystem that redefines training paradigms across the globe.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Professional Coach/Founder Spotlight -->
+            <div class="founder-spotlight-card">
+                <div class="founder-frame">
+                    <img src="images/head.png" alt="Head Coach Portrait">
+                    <div class="founder-overlay"></div>
+                    <div class="founder-badge">HEAD COACH</div>
+                </div>
+                <div class="founder-quote-box">
+                    <i class="fa-solid fa-quote-left quote-art"></i>
+                    <p class="quote-text">Badminton is not merely a game of speed; it's a high-velocity chess match played with the body. We don't train you to just smash; we train you to think, outlast, and dominate.</p>
+                    <h5 class="founder-name">Coach Raman Goswami</h5>
+                    <span class="founder-titles">Former National Player • 20+ Relevant Experience</span>
+                </div>
+            </div>
+        </div>
+
+       <div class="why-choose-us">
+    <h3 class="subsection-title">WHY CHOOSE FAST N FURIOUS?</h3>
+
+    <div class="advantage-grid">
+
+        <div class="adv-box">
+            <i class="fa-solid fa-user-graduate"></i>
+            <h5>Experienced Coaching</h5>
+            <p>Personalized training for beginners, intermediate, and advanced players with focus on proper techniques.</p>
+        </div>
+
+        <div class="adv-box">
+            <i class="fa-solid fa-dumbbell"></i>
+            <h5>Fitness & Skills</h5>
+            <p>Regular fitness sessions, footwork drills, match practice, and skill development to improve overall performance.</p>
+        </div>
+
+        <div class="adv-box">
+            <i class="fa-solid fa-trophy"></i>
+            <h5>Tournament Exposure</h5>
+            <p>Opportunities to participate in local and district tournaments to gain confidence and competitive experience.</p>
+        </div>
+
+    </div>
+</div>
+
+        <!-- Interactive Journey Timeline -->
+       <div class="timeline-wrapper">
+
+    <h3 class="subsection-title">OUR JOURNEY</h3>
+
+    <div class="timeline-container">
+
+        <div class="timeline-line"></div>
+
+        <div class="timeline-node">
+
+            <div class="node-dot"></div>
+
+            <div class="node-content">
+
+                <span class="node-year">2023</span>
+
+                <h5>Academy Founded</h5>
+
+                <p>Fast N Furious Badminton Academy was established with the vision of developing passionate badminton players.</p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-node">
+
+            <div class="node-dot"></div>
+
+            <div class="node-content">
+
+                <span class="node-year">2024</span>
+
+                <h5>Growing Community</h5>
+
+                <p>The academy welcomed more students and started regular coaching sessions for all age groups.</p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-node current">
+
+            <div class="node-dot"></div>
+
+            <div class="node-content">
+
+                <span class="node-year">Today</span>
+
+                <h5>Building Future Champions</h5>
+
+                <p>Continuing to inspire young athletes through quality coaching, discipline, and a passion for badminton.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+    </div>
+</section>
+
+
+<section class="video-section">
+    <video class="responsive-video" autoplay muted loop playsinline>
+        <source src="images/video.mp4" type="video/mp4">
+    </video>
+</section>
+
+
+
+
+
+<!-- 🏸 PROGRAMS & BATCH MATRIX SECTION -->
+<section id="programs" class="section-programs">
+    <div class="section-container">
+        
+        <!-- Section Title Wrapper -->
+        <div class="section-header">
+            <span class="sub-heading">// PATHWAYS TO EXCELLENCE</span>
+            <h2 class="display-heading">CHOOSE YOUR <span class="highlight">TRAINING MATRIX</span></h2>
+            <div class="heading-separator"></div>
+        </div>
+
+        <!-- Tiered Program Cards Grid -->
+        <div class="programs-tier-grid">
+            
+            <!-- Tier 1: Grassroots Foundation -->
+            <div class="program-tier-card">
+                <div class="tier-accent-line grassroots"></div>
+                <div class="tier-header">
+                    <span class="tier-tag">AGES 6 - 14</span>
+                    <h3>Grassroots Foundation</h3>
+                </div>
+                <p class="tier-description">Building structural foundations. Focused on fundamental motor skills, baseline footwork grip mechanics, and falling/recovery physics.</p>
+                <ul class="tier-features">
+                    <li><i class="fa-solid fa-check"></i> 1:8 Coach-to-Student Ratio</li>
+                    <li><i class="fa-solid fa-check"></i> Basic Swing & Serve Kinematics</li>
+                    <li><i class="fa-solid fa-check"></i> Fun Reflex Integration Drills</li>
+                </ul>
+                <div class="tier-footer">
+                    <a href="#contact" class="btn-tier-action">INQUIRE BATCH</a>
+                </div>
+            </div>
+
+            <!-- Tier 2: Intermediate Competitive -->
+            <div class="program-tier-card highlighted-tier">
+                <div class="tier-accent-line competitive"></div>
+                <div class="tier-header">
+                    <span class="tier-tag hot-tag">MOST POPULAR</span>
+                    <h3>Intermediate Pro</h3>
+                </div>
+                <p class="tier-description">Transitioning from recreational play to tactical mastery. Focuses on explosive speed bursts, drop-shot precision, and tournament structures.</p>
+                <ul class="tier-features">
+                    <li><i class="fa-solid fa-check"></i> 1:5 Elite Coach Ratio</li>
+                    <li><i class="fa-solid fa-check"></i> Cross-Court Tactical Sequencing</li>
+                    <li><i class="fa-solid fa-check"></i> Cardio & Endure Testing</li>
+                </ul>
+                <div class="tier-footer">
+                    <a href="#contact" class="btn-tier-action primary-tier-btn">JOIN HIGH PERFORMANCE</a>
+                </div>
+            </div>
+
+            <!-- Tier 3: Elite High Performance -->
+            <div class="program-tier-card">
+                <div class="tier-accent-line elite"></div>
+                <div class="tier-header">
+                    <span class="tier-tag">RANKED ATHLETES ONLY</span>
+                    <h3>Elite Masterclass</h3>
+                </div>
+                <p class="tier-description">Strictly reserved for district, state, and national ranking contenders. Features aggressive high-intensity intervals, video profiling, and match play strategies.</p>
+                <ul class="tier-features">
+                    <li><i class="fa-solid fa-check"></i> 1:2 Personal Supervision</li>
+                    <li><i class="fa-solid fa-check"></i> Biomechanical Defect Fixing</li>
+                    <li><i class="fa-solid fa-check"></i> Mental Conditioning Blueprints</li>
+                </ul>
+                <div class="tier-footer">
+                    <a href="#contact" class="btn-tier-action">REQUEST AUDITION</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 📅 DYNAMIC BATCH TIMETABLE MATRIX -->
+        <div class="timetable-matrix-container">
+            <h3 class="subsection-title">WEEKLY SCHEDULE ENGINE</h3>
+            
+            <!-- Dynamic Tab Switchers -->
+            <div class="matrix-tab-row">
+                <button class="matrix-tab-btn active" data-target="weekday-matrix">WEEKDAYS (MON-FRI)</button>
+                <button class="matrix-tab-btn" data-target="weekend-matrix">WEEKENDS (SAT-SUN)</button>
+            </div>
+
+            <!-- Timetable Blocks Wrapper -->
+            <div class="matrix-content-wrapper">
+                
+                <!-- Weekday Data Block -->
+                <div class="matrix-pane active" id="weekday-matrix">
+                    <div class="responsive-table-scroll">
+                        <table class="matrix-table">
+                            <thead>
+                                <tr>
+                                    <th>BATCH CATEGORY</th>
+                                    <th>MORNING SLOTS</th>
+                                    <th>EVENING SLOTS</th>
+                                    <th>INTENSITY</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="bold-td">Grassroots Foundation</td>
+                                    <td>06:00 AM - 07:30 AM</td>
+                                    <td>-</td>
+                                    <td><span class="intensity-badge level-low">MODERATE</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="bold-td">Intermediate Pro</td>
+                                    <td>07:30 AM - 09:00 AM</td>
+                                    <td>03:30 PM - 05:30 PM</td>
+                                    <td><span class="intensity-badge level-med">HIGH SPEED</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="bold-td">Elite Masterclass</td>
+                                    <td>-</td>
+                                    <td>05:30 Onwards</td>
+                                    <td><span class="intensity-badge level-max">MAX EXHAUST</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Weekend Data Block -->
+                <div class="matrix-pane" id="weekend-matrix">
+                    <div class="responsive-table-scroll">
+                        <table class="matrix-table">
+                            <thead>
+                                <tr>
+                                    <th>BATCH CATEGORY</th>
+                                    <th>MORNING SLOTS</th>
+                                    <th>EVENING SLOTS</th>
+                                    <th>INTENSITY</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="bold-td">Adult Corporate Fitness</td>
+                                    <td>07:00 AM - 09:00 AM</td>
+                                    <td>04:00 PM - 06:00 PM</td>
+                                    <td><span class="intensity-badge level-low">STAMINA BOOST</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="bold-td">Special Masterclass Clinic</td>
+                                    <td>09:00 AM - 12:00 PM</td>
+                                    <td>CLOSED</td>
+                                    <td><span class="intensity-badge level-max">PRO STRATEGY</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="coaches" class="section-coaches">
+    <div class="section-container">
+        
+        <div class="section-header">
+            <span class="sub-heading">// TECHNICAL DIRECTORS</span>
+            <h2 class="display-heading">ELITE COURT <span class="highlight">COMMANDERS</span></h2>
+            <div class="heading-separator"></div>
+        </div>
+
+        <div class="coaches-roster-grid">
+            
+            <div class="coach-profile-card">
+                <div class="coach-media-wrapper">
+                    <img src="images/head.png" alt="Head Coach Raman Goswami">
+                    <div class="coach-media-overlay"></div>
+                    <div class="coach-primary-tag">HEAD COACH</div>
+                </div>
+                
+                <div class="coach-meta-details">
+                    <div class="coach-identity">
+                        <h4>Raman Goswami</h4>
+                        <span class="coach-credential">Former National Player • 20+ Relevant Experience</span>
+                    </div>
+                    
+                    <p class="coach-philosophy">"Champions aren't built on raw talent alone; they are sculpted through relentless technical discipline and clinical precision."</p>
+                    
+                    <div class="coach-metrics-panel">
+                        <div class="metric-row">
+                            <span class="metric-name">Tactical Play & Strategy</span>
+                            <div class="metric-bar-frame"><div class="metric-fill-line" style="width: 98%;"></div></div>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-name">Kinematic Video Analysis</span>
+                            <div class="metric-bar-frame"><div class="metric-fill-line" style="width: 95%;"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="specialty-tags-row">
+                        <span class="spec-tag">Deceptive Drops</span>
+                        <span class="spec-tag">Match Play Profiling</span>
+                        <span class="spec-tag">Explosive Agility</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coach-profile-card">
+                <div class="coach-media-wrapper">
+                    <img src="images/aesh.png" alt="Aesh Goswami">
+                    <div class="coach-media-overlay"></div>
+                    <div class="coach-primary-tag">JUNIOR COACH</div>
+                </div>
+                
+                <div class="coach-meta-details">
+                    <div class="coach-identity">
+                        <h4>Aesh Goswami</h4>
+                        <span class="coach-credential">National Games Medalist • High-Performance Expert</span>
+                    </div>
+                    
+                    <p class="coach-philosophy">"Footwork determines everything. If your movement base is compromised, your smash power is mathematically cut in half."</p>
+                    
+                    <div class="coach-metrics-panel">
+                        <div class="metric-row">
+                            <span class="metric-name">Footwork Speed Mechanics</span>
+                            <div class="metric-bar-frame"><div class="metric-fill-line" style="width: 96%;"></div></div>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-name">Defensive Counter-Attacking</span>
+                            <div class="metric-bar-frame"><div class="metric-fill-line" style="width: 92%;"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="specialty-tags-row">
+                        <span class="spec-tag">Net Control Play</span>
+                        <span class="spec-tag">Endurance Conditioning</span>
+                        <span class="spec-tag">Smash Recovery</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+<section class="why-ffba">
+
+    <div class="section-heading">
+        <span>WHY FFBA?</span>
+        <h2>More Than Training.<br>We Build Players.</h2>
+        <p>
+            At Fast N Furious Badminton Academy, we focus on developing
+            complete players through technique, fitness, discipline and
+            competitive experience.
+        </p>
+    </div>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+            <div class="why-icon">🏸</div>
+            <h3>Professional Training</h3>
+            <p>
+                Structured training designed to develop strong fundamentals,
+                proper technique and consistent performance.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">🎯</div>
+            <h3>Technical Development</h3>
+            <p>
+                Improve your strokes, footwork, movement, serving, attacking
+                and defensive skills.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">💪</div>
+            <h3>Fitness & Conditioning</h3>
+            <p>
+                Build speed, agility, endurance, strength and physical
+                conditioning required for badminton.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">🏆</div>
+            <h3>Competitive Exposure</h3>
+            <p>
+                Develop match experience and prepare yourself for competitive
+                badminton and tournament environments.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">🧠</div>
+            <h3>Match Strategy</h3>
+            <p>
+                Learn how to read the game, understand opponents and make
+                smarter decisions during matches.
+            </p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">🔥</div>
+            <h3>Discipline & Dedication</h3>
+            <p>
+                Build the mindset, discipline and commitment required to
+                continuously improve your game.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+<section class="why-we-started">
+
+    <div class="story-container">
+
+        <!-- Left Side -->
+        <div class="story-label">
+            <span>OUR STORY</span>
+            <div class="story-line"></div>
+            <p>WHY WE STARTED</p>
+        </div>
+
+
+        <!-- Right Side -->
+        <div class="story-content">
+
+            <span class="story-small-title">
+                WHY DOES FAST N FURIOUS EXIST?
+            </span>
+
+            <h2>
+                Talent should never be stopped by money.
+                <br>
+                A dream should never be limited by distance.
+            </h2>
+
+            <p>
+                Fast N Furious Badminton Academy was created with a simple
+                belief — every talented player deserves a place to train,
+                grow and chase their dream.
+            </p>
+
+            <p>
+                We have seen talented players with the ability to go far,
+                but their journey becomes harder when quality training is
+                expensive. Many academies demand high fees, while some of
+                the best opportunities are far away from a player's
+                hometown.
+            </p>
+
+            <div class="story-highlight">
+                <span>THE QUESTION SHOULD BE</span>
+
+                <h3>
+                    "How far can I go?"
+                </h3>
+
+                <span class="not-this">
+                    Not "Can my family afford to send me there?"
+                </span>
+            </div>
+
+            <p>
+                That's why Fast N Furious Badminton Academy exists.
+                We want to bring serious badminton training closer to home
+                and create an environment where players can work hard,
+                improve their game and believe in their potential.
+            </p>
+
+            <p>
+                We cannot promise every player a championship.
+                But we can promise a place where hard work is respected,
+                discipline matters and every genuine effort counts.
+            </p>
+
+            <div class="story-ending">
+
+                <p>
+                    Champions aren't created overnight.
+                </p>
+
+                <h3>
+                    They are built through early mornings,
+                    difficult sessions, countless rallies,
+                    lost matches and the courage to come back stronger.
+                </h3>
+
+            </div>
+
+            <div class="story-final">
+
+                <strong>YOUR TALENT IS YOURS.</strong>
+                <strong>YOUR DREAM IS YOURS.</strong>
+                <strong>LET'S BUILD THE JOURNEY TOGETHER.</strong>
+
+            </div>
+
+            <div class="story-brand">
+                <span>FAST N FURIOUS BADMINTON ACADEMY</span>
+                <p>
+                    Where distance becomes smaller, opportunities become
+                    closer, and dreams get a place to grow.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+<section class="training-programs">
+
+    <div class="program-heading">
+
+        <span>TRAINING PROGRAMS</span>
+
+        <h2>
+            Find Your Level.<br>
+            Build Your Game.
+        </h2>
+
+        <p>
+            Every player has a different starting point. Our training
+            structure helps you develop your skills and progress towards
+            competitive badminton.
+        </p>
+
+    </div>
+
+
+    <div class="program-grid">
+
+        <!-- Beginner -->
+
+        <div class="program-card">
+
+            <div class="program-number">
+                01
+            </div>
+
+            <div class="program-content">
+
+                <span class="program-level">
+                    BEGINNER
+                </span>
+
+                <h3>
+                    Build Your Fundamentals.
+                </h3>
+
+                <p>
+                    Learn the foundations of badminton including basic
+                    strokes, movement, grip, serving and court awareness.
+                </p>
+
+            </div>
+
+            
+
+        </div>
+
+
+        <!-- Intermediate -->
+
+        <div class="program-card">
+
+            <div class="program-number">
+                02
+            </div>
+
+            <div class="program-content">
+
+                <span class="program-level">
+                    INTERMEDIATE
+                </span>
+
+                <h3>
+                    Improve Your Game.
+                </h3>
+
+                <p>
+                    Develop better technique, consistency, footwork and
+                    movement while becoming more confident during matches.
+                </p>
+
+            </div>
+
+            
+
+        </div>
+
+
+        <!-- Advanced -->
+
+        <div class="program-card">
+
+            <div class="program-number">
+                03
+            </div>
+
+            <div class="program-content">
+
+                <span class="program-level">
+                    ADVANCED
+                </span>
+
+                <h3>
+                    Take Your Game Further.
+                </h3>
+
+                <p>
+                    Refine your technique, tactical understanding and
+                    physical abilities to compete at a higher level.
+                </p>
+
+            </div>
+
+            
+
+        </div>
+
+
+        <!-- Performance -->
+
+        <div class="program-card performance-card">
+
+            <div class="program-number">
+                04
+            </div>
+
+            <div class="program-content">
+
+                <span class="program-level">
+                    PERFORMANCE
+                </span>
+
+                <h3>
+                    Train To Compete.
+                </h3>
+
+                <p>
+                    Tournament-focused training designed for players who
+                    are serious about competitive badminton and performance.
+                </p>
+
+            </div>
+
+            
+
+        </div>
+
+    </div>
+
+
+    <div class="program-note">
+
+        <strong>Important:</strong>
+
+        FFBA does not offer trial sessions.
+        Enrollment begins after contacting the academy,
+        visiting the academy and completing the required pre-payment.
+
+    </div>
+
+</section>
+
+
+
+
+
+<section class="academy-videos">
+    <div class="videos-container">
+
+        <h2>Academy Videos</h2>
+        <h3 class="scroll-text">Scroll Right to view more.</h3>
+
+        <div class="video-slider">
+
+            
+            <!-- Video 2 -->
+            <div class="video-card">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/CILT1x4p69I?si=nk0kORMIBeEScvh6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Video 3 -->
+            <div class="video-card">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/nhn-az33Hvw?si=vJs6eEQMtVHdrm4A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- Video 4 -->
+            <div class="video-card">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/6UvDAnyXUNI?si=0wj6dozMWQrL47F3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+
+            <!-- Video 5 -->
+            <div class="video-card">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ca9s6uENTrk?si=H8sel7w4AeWQLz3Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+<section id="gallery" class="section-gallery">
+    <div class="section-container">
+        
+        <div class="section-header">
+            <span class="sub-heading">// VISUAL TELEMETRY</span>
+            <h2 class="display-heading">INSIDE THE <span class="highlight">ARENA</span></h2>
+            <div class="heading-separator"></div>
+        </div>
+
+        <div class="gallery-filter-row">
+            <button class="filter-btn active" data-filter="all">ALL MEDIA</button>
+            <button class="filter-btn" data-filter="training">TRAINING DRILLS</button>
+            <button class="filter-btn" data-filter="matches">TOURNAMENTS</button>
+            <button class="filter-btn" data-filter="campus">OUR INFRASTRUCTURE</button>
+        </div>
+
+        <div class="gallery-matrix-grid">
+            
+            <div class="gallery-card" data-category="training">
+                <div class="gallery-media-frame">
+                    <img src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?q=80&w=600" alt="Smash Training Execution">
+                    <div class="gallery-hover-overlay">
+                        <div class="zoom-icon-box"><i class="fa-solid fa-expand"></i></div>
+                        <div class="gallery-meta-text">
+                            <span>SMASH KINEMATICS</span>
+                            <p>High-Performance Jump Smash Drills</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="matches">
+                <div class="gallery-media-frame">
+                    <img src="https://images.unsplash.com/photo-1521537634581-0dced2fee2ef?q=80&w=600" alt="Championship Match Action">
+                    <div class="gallery-hover-overlay">
+                        <div class="zoom-icon-box"><i class="fa-solid fa-expand"></i></div>
+                        <div class="gallery-meta-text">
+                            <span>STATE FINALS 2026</span>
+                            <p>FNF Elite Players Securing Gold</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="campus">
+                <div class="gallery-media-frame">
+                    <img src="https://images.unsplash.com/photo-1554074440-0524cb3520f3?q=80&w=600" alt="Olympic Grade Courts Layout">
+                    <div class="gallery-hover-overlay">
+                        <div class="zoom-icon-box"><i class="fa-solid fa-expand"></i></div>
+                        <div class="gallery-meta-text">
+                            <span>COURT COMPLEX</span>
+                            <p>8-Mat Olympic Standard Setup</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="training">
+                <div class="gallery-media-frame">
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=600" alt="Agility Grid Ladders Training">
+                    <div class="gallery-hover-overlay">
+                        <div class="zoom-icon-box"><i class="fa-solid fa-expand"></i></div>
+                        <div class="gallery-meta-text">
+                            <span>AGILITY DRILLS</span>
+                            <p>Explosive Lateral Footwork Workouts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="matches">
+                <div class="gallery-media-frame">
+                    <img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?q=80&w=600" alt="Doubles Strategy Match">
+                    <div class="gallery-hover-overlay">
+                        <div class="zoom-icon-box"><i class="fa-solid fa-expand"></i></div>
+                        <div class="gallery-meta-text">
+                            <span>TACTICAL CO-OP</span>
+                            <p>Pro Doubles Inter-Club League</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-category="campus">
+                <div class="gallery-media-frame">
+                    <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=600" alt="Recovery Lounges and Gym Complex">
+                    <div class="gallery-hover-overlay">
+                        <div class="zoom-icon-box"><i class="fa-solid fa-expand"></i></div>
+                        <div class="gallery-meta-text">
+                            <span>PHYSIO STATION</span>
+                            <p>Cryotherapy and Kinetic Recovery Zones</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 🏆 ACHIEVEMENTS & TROPHY SHOWCASE -->
+<section id="achievements" class="section-achievements">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="sub-heading">// METAL WORK & TRACK RECORD</span>
+            <h2 class="display-heading">CHAMPIONSHIP <span class="highlight">TELEMETRY</span></h2>
+            <div class="heading-separator"></div>
+        </div>
+
+        <!-- Metric Counter Row -->
+        <div class="achievements-counter-grid">
+            <div class="counter-card">
+                <span class="counter-num">02</span>
+                <span class="counter-label">INTERNATIONAL PARTICIPATIONS</span>
+            </div>
+            <div class="counter-card highlight-card">
+                <span class="counter-num">22+</span>
+                <span class="counter-label">NATIONAL MEDALS SECURED</span>
+            </div>
+            <div class="counter-card">
+                <span class="counter-num">65+</span>
+                <span class="counter-label">STATE CHAMPIONSHIP PODIUMS</span>
+            </div>
+            <div class="counter-card">
+                <span class="counter-num">80+</span>
+                <span class="counter-label">DISTRICT TOURNAMENT TITLES</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- 🎖️ STUDENT SHOWCASE (TOP PERFORMERS) -->
+<section id="showcase" class="section-showcase">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="sub-heading">// RISING TALENT RADAR</span>
+            <h2 class="display-heading">PLAYER OF <span class="highlight">THE MONTH</span></h2>
+            <div class="heading-separator"></div>
+        </div>
+
+        <div class="showcase-mvp-card">
+            <div class="mvp-media">
+                <img src="images/aryan.png" alt="MVP Player Profile">
+                <div class="mvp-badge">OCTANE PERFORMER</div>
+            </div>
+            <div class="mvp-details">
+                <span class="mvp-rank">U-11 Punjab Open Winner</span>
+                <h3>ARYAN JINDAL</h3>
+                <p class="mvp-achievement-summary">Secured Gold at the U-11 Boys Singles Punjab Open Tournament 2026.</p>
+                <div class="mvp-stats-row">
+                    <div class="mvp-stat-pill"><strong>Smash Velocity:</strong> 120 km/h</div>
+                    <div class="mvp-stat-pill"><strong>Win Streak:</strong> 18 Matches</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="champions-section">
+
+    <div class="champions-heading">
+        <span>OUR CHAMPIONS</span>
+        <h2>Built to Compete.<br>Trained to Win.</h2>
+        <p>Meet the players who represent the spirit of Fast N Furious.</p>
+    </div>
+
+    <h3 class="scroll-text">← Scroll Right to view more →</h3>
+
+    <div class="champions-slider">
+
+        <div class="champion-card">
+            <img src="images/player1.jpg" alt="Player Name">
+
+            <div class="champion-info">
+                <h3>Player Name</h3>
+                <p>State Champion</p>
+            </div>
+        </div>
+
+        <div class="champion-card">
+            <img src="images/player2.jpg" alt="Player Name">
+
+            <div class="champion-info">
+                <h3>Player Name</h3>
+                <p>District Champion</p>
+            </div>
+        </div>
+
+        <div class="champion-card">
+            <img src="images/player3.jpg" alt="Player Name">
+
+            <div class="champion-info">
+                <h3>Player Name</h3>
+                <p>National Player</p>
+            </div>
+        </div>
+
+        <div class="champion-card">
+            <img src="images/player4.jpg" alt="Player Name">
+
+            <div class="champion-info">
+                <h3>Player Name</h3>
+                <p>Tournament Winner</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="section-cta-banner">
+    <div class="section-container cta-flex">
+        <div class="cta-text">
+            <h2>READY TO DOMINATE THE COURT?</h2>
+            <p>Connect with our technical admissions desk directly to book your slot entry.</p>
+        </div>
+        <div class="cta-action">
+            <a href="tel:+919149429397" class="btn-cta-terminal">
+                <i class="fa-solid fa-phone-flip"></i> CALL NOW: +91 91494 29397
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ⭐ TESTIMONIALS ENGINE -->
+<section id="testimonials" class="section-testimonials">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="sub-heading">// AUDITED PERFORMANCE FEEDBACK</span>
+            <h2 class="display-heading">COURT SIDE <span class="highlight">REVIEWS</span></h2>
+            <div class="heading-separator"></div>
+        </div>
+
+        <div class="testimonials-slider-viewport">
+            <!-- Active Testimonial Pane Wrapper -->
+            <div class="testimonial-track" id="testimonial-track">
+                
+                <!-- Review 1 -->
+                <div class="testimonial-slide active">
+                    <div class="star-rating-row">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"The transformation in my son's footwork speed was noticeable within 6 weeks. Coach Vikram's kinematic video reviews isolate defects that local clubs completely miss."</p>
+                    <span class="reviewer-name">Devendra Verma</span>
+                    <span class="reviewer-meta">Parent of Grassroots Student</span>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="testimonial-slide">
+                    <div class="star-rating-row">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"Intense, analytical, and highly demanding. The Elite Masterclass blueprint restructured my entire court coverage physics. Recommended for competitive ranked players."</p>
+                    <span class="reviewer-name">Kabir Malhotra</span>
+                    <span class="reviewer-meta">Parent of Grassroots Student</span>
+                </div>
+            </div>
+
+            <!-- Slide Nav Buttons -->
+            <div class="slider-controls">
+                <button id="prev-slide" class="control-btn"><i class="fa-solid fa-arrow-left"></i></button>
+                <button id="next-slide" class="control-btn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- 🌐 BRAND ALIGNMENT LOGO ROW -->
+<section class="section-brand-matrix">
+    <div class="section-container matrix-flex-row">
+        <span class="matrix-title">OFFICIAL EQUIPMENT & GEAR STANDARDS:</span>
+        <div class="logo-cluster">
+            <span class="brand-logo-mock">YONEX</span>
+            <span class="brand-logo-mock">LI-NING</span>
+            <span class="brand-logo-mock">VICTOR</span>
+            <span class="brand-logo-mock">BWF COMPLIANT</span>
+        </div>
+    </div>
+</section>
+
+<!-- 🛍️ GEAR & RECOMMENDED EQUIPMENT MODULE -->
+<section id="equipment" class="section-equipment">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="sub-heading">// TECHNICAL DEPLOYMENT GEAR</span>
+            <h2 class="display-heading">RECOMMENDED <span class="highlight">EQUIPMENT</span></h2>
+            <div class="heading-separator"></div>
+        </div>
+
+        <div class="equipment-matrix-grid">
+            <!-- Gear Item 1 -->
+            <div class="gear-card">
+                <span class="gear-cat">RACKET MATRICES</span>
+                <h4>Yonex Astrox 100ZZ</h4>
+                <p>Head-heavy distribution optimized exclusively for Elite level smash velocity and hyper-snapping response matrices.</p>
+            </div>
+            <!-- Gear Item 2 -->
+            <div class="gear-card">
+                <span class="gear-cat">FOOTWEAR SHIELDS</span>
+                <h4>Yonex Power Cushion +</h4>
+                <p>Advanced radial sole patterns offering shock absorption to safeguard knee joints during high-impact recovery lunge vectors.</p>
+            </div>
+            <!-- Gear Item 3 -->
+            <div class="gear-card">
+                <span class="gear-cat">STRINGS & ACCS</span>
+                <h4>BG80 Power / Aerobite</h4>
+                <p>High-modulus nylon core configurations optimized for tactile drop controls and deafening smash audio acoustics.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ❓ FAQ ACCORDION ARCHITECTURE -->
+<section id="faq" class="section-faq">
+    <div class="section-container">
+        <div class="section-header">
+            <span class="sub-heading">// DIRECT KNOWLEDGE BASE</span>
+            <h2 class="display-heading">FREQUENTLY ASKED <span class="highlight">QUESTIONS</span></h2>
+            <div class="heading-separator"></div>
+        </div>
+
+        <div class="faq-accordion-wrapper">
+            <!-- FAQ Item 1 -->
+            <div class="faq-node">
+                <button class="faq-trigger">What is the baseline minimum age requirement for enrollment? <i class="fa-solid fa-plus"></i></button>
+                <div class="faq-panel">
+                    <p>Our Grassroots Foundation training matrices accept student athletes starting strictly from age 6 up to age 14. Advanced tiers have evaluation thresholds instead of strict age cutoffs.</p>
+                </div>
+            </div>
+            <!-- FAQ Item 2 -->
+            <div class="faq-node">
+                <button class="faq-trigger">What specific equipment does an athlete need to bring on Day 1? <i class="fa-solid fa-plus"></i></button>
+                <div class="faq-panel">
+                    <p>Athletes must provide non-marking badminton court shoes, a functional graphite racket matching their developmental level, and appropriate sportswear. Training shuttlecocks are provided by the academy.</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- 🌐 MAPS EMBED & TACTICAL CONNECTS -->
+<section class="section-maps-connect">
+    <div class="section-container map-split-layout">
+        <!-- Google Map Container Frame -->
+        <div class="map-embed-frame">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3449.074387569739!2d74.94203297536184!3d30.1778689748567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39172d868e442f53%3A0x9ea857e6fefa5c7f!2sFast%20N%20Furious%20Badminton%20Academy%20(FFBA)!5e0!3m2!1sen!2sin!4v1786631582870!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe> width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+        <!-- Social Hub Hook -->
+        <div class="social-hub-card">
+            <h4>COMMUNITY CHANNELS</h4>
+            <p>Engage with our training footage matrices updated weekly across our public handles.</p>
+            <div class="social-links-row">
+                
+                <a href="https://www.youtube.com/@FastNFuriousBadmintonAcademy" class="social-icon-btn"><i class="fa-brands fa-youtube"></i></a>
+              
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 🟢 FIXED FLOATING WHATSAPP CONNECTOR -->
+<a href="https://wa.me/919149429397?text=I%20am%20interested%20in%20arranging%20a%20court%20audition%20at%20FNF%20Academy." class="floating-whatsapp-trigger" target="_blank" rel="noopener noreferrer">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="hover-tip-label">CHAT WITH ADMISSIONS</span>
+</a>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Column 2: High-Performance Intake Form -->
+<div class="terminal-form-panel" id="contact">
+    <!-- Replace 'YOUR_FORMSPREE_ENDPOINT_ID' with your real Formspree form ID hash -->
+    <form id="academy-intake-form" class="intake-form-element" action="https://formspree.io/f/xqpzbrzn" method="POST">
+        
+        <!-- Input Row 1 -->
+        <div class="form-input-group">
+            <label for="athlete-name">ATHLETE FULL NAME *</label>
+            <input type="text" id="athlete-name" name="name" placeholder="e.g. Rohan Verma" required>
+        </div>
+
+        <!-- Input Grid Row 2 -->
+        <div class="form-double-row">
+            <div class="form-input-group">
+                <label for="athlete-phone">CONTACT NUMBER *</label>
+                <input type="tel" id="athlete-phone" name="phone" placeholder="e.g. +91 XXXXX XXXXX" required>
+            </div>
+            <div class="form-input-group">
+                <label for="athlete-email">EMAIL ADDRESS *</label>
+                <input type="email" id="athlete-email" name="_replyto" placeholder="name@domain.com" required>
+            </div>
+        </div>
+
+        <!-- Input Grid Row 3 -->
+        <div class="form-double-row">
+            <div class="form-input-group">
+                <label for="training-tier">SELECT TARGET MATRIX *</label>
+                <select id="training-tier" name="training_tier" required>
+                    <option value="" disabled selected>Choose target tier...</option>
+                    <option value="grassroots">Grassroots Foundation (Ages 6 - 14)</option>
+                    <option value="intermediate">Intermediate Pro (Competitive Circuit)</option>
+                    <option value="elite">Elite Masterclass (Ranked Athletes)</option>
+                </select>
+            </div>
+            <div class="form-input-group">
+                <label for="preferred-batch">PREFERRED SCHEDULE *</label>
+                <select id="preferred-batch" name="preferred_schedule" required>
+                    <option value="" disabled selected>Choose slot type...</option>
+                    <option value="weekday-morning">Weekdays: Morning Session</option>
+                    <option value="weekday-evening">Weekdays: Evening Session</option>
+                    <option value="weekend">Weekends Full-Immersive</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Input Row 4 -->
+        <div class="form-input-group">
+            <label for="athlete-notes">PAST TRAINING HISTORY / MEDAL PROFILE (OPTIONAL)</label>
+            <textarea id="athlete-notes" name="training_history" rows="4" placeholder="Detail any prior ranking points, club training duration, or fitness limitations..."></textarea>
+        </div>
+
+        <!-- Action Submit Button -->
+        <button type="submit" class="btn-submit-terminal">
+            TRANSMIT AUDITION APPLICATION <i class="fa-solid fa-arrow-right-long"></i>
+        </button>
+
+    </form>
+</div>
+
+
+
+<!-- 🏢 INFRASTRUCTURE & LEGAL SUB-FOOTER -->
+<!-- 🏢 INFRASTRUCTURE & LEGAL SUB-FOOTER -->
+<div class="sub-footer-terminal">
+    <div class="section-container sub-footer-grid">
+        <div class="infra-copyright">
+            <p>&copy; 2026 FNF Badminton Academy. All Rights Reserved. Engineered for High Performance.</p>
+        </div>
+        <div class="infra-utility-links">
+            <!-- Programmed routing directly to the new multi-tab legal file -->
+            <a href="legal.html">ACADEMY POLICIES</a>
+            <span class="utility-divider">|</span>
+            <a href="legal.html">COURT DISCLAIMERS</a>
+            <span class="utility-divider">|</span>
+            <a href="legal.html">ANTI-DOPING COMPLIANCE</a>
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

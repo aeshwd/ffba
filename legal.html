@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regulatory Framework | FNF Badminton Academy</title>
+    
+    <!-- Core Font & Icon Telemetry -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Link to your existing architectural stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Document Specific Architecture */
+        .legal-viewport {
+            padding: 140px 0 100px;
+            background-color: var(--bg-dark);
+            min-height: 80vh;
+        }
+        .legal-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .legal-nav-tabs {
+            display: flex;
+            gap: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .legal-tab-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-stale);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: 16px 24px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-bottom: 2px solid transparent;
+            text-transform: uppercase;
+        }
+        .legal-tab-btn.active, .legal-tab-btn:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+        .legal-content-pane {
+            display: none;
+            animation: paneFade 0.4s ease forwards;
+        }
+        .legal-content-pane.active {
+            display: block;
+        }
+        .legal-content-pane h3 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+            color: var(--text-pure);
+        }
+        .legal-content-pane p {
+            font-size: 0.95rem;
+            color: var(--text-stale);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        .legal-content-pane ul {
+            margin-bottom: 24px;
+            padding-left: 20px;
+        }
+        .legal-content-pane li {
+            color: var(--text-stale);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        .back-home-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 32px;
+            text-transform: uppercase;
+        }
+        @keyframes paneFade {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+
+        /* ==========================================
+   🧭 NAV BAR & CONTROLS REFINEMENT
+   ========================================== */
+.master-nav-terminal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(7, 7, 8, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    z-index: 10000;
+    padding: 20px 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand-logo {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: var(--text-pure);
+    text-decoration: none;
+}
+
+/* 🔙 The Beautifully Engineered Return Button */
+.nav-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--text-pure);
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-cta-btn i {
+    font-size: 0.85rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-cta-btn:hover {
+    background: var(--accent);
+    color: var(--text-pure);
+    box-shadow: 0 0 20px rgba(255, 42, 42, 0.2);
+}
+
+.nav-cta-btn:hover i {
+    transform: translateX(-4px); /* Points backward visually on hover */
+}
+
+/* Back Link Hover Effect */
+.back-home-link:hover {
+    color: var(--text-pure);
+    text-shadow: 0 0 10px rgba(255, 42, 42, 0.4);
+}
+    </style>
+</head>
+<body>
+
+    <!-- Simple Dynamic Navigation Bar -->
+    <nav class="master-nav-terminal">
+        <div class="nav-container">
+            <a href="main.html" class="nav-brand-logo">FAST & <span class="highlight">FURIOUS</span></a>
+            <a href="main.html" class="nav-cta-btn"><i class="fa-solid fa-arrow-left"></i> RETURN TO ARENA</a>
+        </div>
+    </nav>
+
+    <!-- Main Text Viewport Container -->
+    <main class="legal-viewport">
+        <div class="legal-container">
+            
+            <a href="main.html" class="back-home-link"><i class="fa-solid fa-chevron-left"></i> Back to Main Hub</a>
+            
+            <div class="section-header" style="text-align: left; margin-bottom: 40px;">
+                <span class="sub-heading">// COMPLIANCE PROTOCOLS</span>
+                <h2 class="display-heading">REGULATORY <span class="highlight">STANDARDS</span></h2>
+                <div class="heading-separator" style="margin: 16px 0 0 0;"></div>
+            </div>
+
+            <!-- Content Switcher Tabs -->
+            <div class="legal-nav-tabs">
+                <button class="legal-tab-btn active" onclick="switchLegalTab(event, 'policies')">Academy Policies</button>
+                <button class="legal-tab-btn" onclick="switchLegalTab(event, 'disclaimers')">Court Disclaimers</button>
+                <button class="legal-tab-btn" onclick="switchLegalTab(event, 'doping')">Anti-Doping Compliance</button>
+            </div>
+
+            <!-- Content Sections -->
+            <div id="policies" class="legal-content-pane active">
+                <h3>ACADEMY OPERATION POLICIES</h3>
+                <p>To preserve our elite competitive structure and elite training metrics, all registered athletes must strictly adhere to our governance framework:</p>
+                <ul>
+                    <li><strong>Attendance Protocol:</strong> Elite tier athletes must maintain a minimum 85% attendance index per calendar month. Absences must be verified via medical telemetry 24 hours prior to the session.</li>
+                    <li><strong>Punctuality Matrix:</strong> On-court kinetic warmups commence exactly at the scheduled minute. Tardy arrivals exceeding 10 minutes will result in forfeiture of the session slot.</li>
+                    <li><strong>Fee Structures:</strong> Subscriptions are processed on a recurring monthly billing vector. Cancellations or tier shifts require written declaration 15 days before the upcoming cycle.</li>
+                </ul>
+            </div>
+
+            <div id="disclaimers" class="legal-content-pane">
+                <h3>LIABILITY & COURT DISCLAIMERS</h3>
+                <p>High-performance badminton training naturally involves intense cardiovascular loading and biomechanical strains. Registration requires recognition of the following operational realities:</p>
+                <ul>
+                    <li><strong>Physical Risk Waiver:</strong> The athlete acknowledges that jumping vectors, lateral changes of direction, and high-velocity shuttle impacts carry risks of acute muscle or ligament injuries. FNF Academy assumes no direct liability for standard sport-related physical trauma.</li>
+                    <li><strong>Equipment Authentication:</strong> Players assume full responsibility for maintaining their rackets and structural protective gear. The academy is not responsible for equipment damage resulting from structural collisions on court.</li>
+                </ul>
+            </div>
+
+            <div id="doping" class="legal-content-pane">
+                <h3>ANTI-DOPING COMPLIANCE MATRIX</h3>
+                <p>FNF Badminton Academy enforces a zero-tolerance policy regarding performance-enhancing drugs, maintaining full alignment with standard National and International Sports Anti-Doping Agencies:</p>
+                <ul>
+                    <li><strong>Substance Bans:</strong> The use of any banned anabolic matrices, artificial oxygen carriers, or prohibited stimulants is strictly forbidden.</li>
+                    <li><strong>Randomized Screenings:</strong> Competitively ranked elite level athletes are subject to internal periodic health evaluations and random sample validation frameworks without prior warning notices.</li>
+                    <li><strong>Sanctions Engine:</strong> Any verified violation immediately terminates academy membership, revokes rank tracking data, and prompts immediate formal notification to regional sports federations.</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Minimal Sub-Footer Integration -->
+    <footer class="master-footer-bar" style="padding: 30px 0;">
+        <div class="section-container" style="text-align: center;">
+            <p style="font-size: 0.8rem; color: var(--text-stale);">© 2026 FNF Badminton Academy. Certified Sports Architecture Framework.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Component Tab Engine Controller -->
+    <script>
+        function switchLegalTab(event, tabId) {
+            // Deactivate existing states
+            document.querySelectorAll('.legal-content-pane').forEach(pane => pane.classList.remove('active'));
+            document.querySelectorAll('.legal-tab-btn').forEach(btn => btn.classList.remove('active'));
+            
+            // Activate selected targets
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>

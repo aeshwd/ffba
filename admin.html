@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FFBA Admin Portal</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-hover: #0369a1;
+      --bg: #0f172a;
+      --card-bg: rgba(30, 41, 59, 0.7);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: rgba(255, 255, 255, 0.1);
+      --success: #22c55e;
+      --danger: #ef4444;
+      --warning: #f59e0b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #090d16;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(2, 132, 199, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(15, 23, 42, 0.8) 0px, transparent 50%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .brand i {
+      color: var(--primary);
+    }
+
+    /* Main Layout */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    /* Modern Login Card */
+    .login-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border);
+      width: 100%;
+      max-width: 420px;
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .login-card h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .login-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .input-wrapper {
+      position: relative;
+    }
+
+    .input-wrapper i {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.85rem 1rem 0.85rem 2.75rem;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: #fff;
+      font-size: 0.95rem;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .form-group input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.15);
+    }
+
+    .btn {
+      padding: 0.85rem 1.5rem;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      width: 100%;
+      background: var(--primary);
+      color: white;
+      margin-top: 0.5rem;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-danger {
+      background: rgba(239, 68, 68, 0.15);
+      color: #fca5a5;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .btn-danger:hover {
+      background: rgba(239, 68, 68, 0.25);
+    }
+
+    .error-msg {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.2);
+      color: #fca5a5;
+      padding: 0.75rem;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      margin-bottom: 1.25rem;
+      display: none;
+      text-align: center;
+    }
+
+    /* Dashboard Container */
+    .dashboard {
+      display: none;
+      width: 100%;
+      max-width: 1100px;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .dashboard-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .search-box {
+      position: relative;
+      min-width: 260px;
+    }
+
+    .search-box i {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 0.75rem 1rem 0.75rem 2.5rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: #fff;
+      outline: none;
+    }
+
+    /* Glassmorphism Table Container */
+    .table-container {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px -15px rgba(0,0,0,0.5);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    th {
+      background: rgba(15, 23, 42, 0.6);
+      padding: 1.25rem 1.5rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+    }
+
+    td {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* Badges & Status */
+    .badge {
+      padding: 0.35rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .badge-beginner {
+      background: rgba(2, 132, 199, 0.15);
+      color: #38bdf8;
+      border: 1px solid rgba(2, 132, 199, 0.3);
+    }
+
+    .badge-pro {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .status-active .status-dot {
+      background: var(--success);
+      box-shadow: 0 0 10px var(--success);
+    }
+
+    .status-inactive .status-dot {
+      background: var(--danger);
+    }
+
+    .status-cell {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 500;
+    }
+
+    .phone-cell i {
+      color: var(--text-muted);
+      margin-right: 0.4rem;
+    }
+
+    /* Responsive Mobile Cards View */
+    @media (max-width: 768px) {
+      header {
+        padding: 1rem;
+      }
+
+      .table-container {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+      }
+
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      thead {
+        display: none; /* Hide headers on mobile */
+      }
+
+      tr {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        margin-bottom: 1rem;
+        padding: 1.25rem;
+      }
+
+      td {
+        padding: 0.6rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      td:last-child {
+        border-bottom: none;
+      }
+
+      td::before {
+        content: attr(data-label);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        font-weight: 600;
+      }
+
+      .dashboard-header {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .search-box {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navbar -->
+  <header>
+    <div class="brand">
+      <i class="fa-solid fa-shuttlecock"></i>
+      <span>FFBA Admin</span>
+    </div>
+    <button class="btn btn-danger" id="logoutBtn" style="display: none;">
+      <i class="fa-solid fa-right-from-bracket"></i> Logout
+    </button>
+  </header>
+
+  <main>
+    <!-- Login Screen -->
+    <div class="login-card" id="loginCard">
+      <h2>Welcome Back</h2>
+      <p>Enter your credentials to access the player directory</p>
+      
+      <div class="error-msg" id="errorMsg">
+        <i class="fa-solid fa-triangle-exclamation"></i> Invalid username or password
+      </div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <div class="input-wrapper">
+            <i class="fa-regular fa-user"></i>
+            <input type="text" id="username" placeholder="admin" required autocomplete="off" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-wrapper">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="password" placeholder="••••••••" required />
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          Sign In <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </form>
+    </div>
+
+    <!-- Admin Player Dashboard -->
+    <div class="dashboard" id="adminDashboard">
+      <div class="dashboard-header">
+        <div>
+          <h2>Players Directory</h2>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Manage FFBA active registrations and skill tiers</p>
+        </div>
+        
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="searchInput" placeholder="Search players..." />
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Player Name</th>
+              <th>Age</th>
+              <th>Skill Level</th>
+              <th>Contact Number</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="playerTableBody">
+            <!-- Dynamically Rendered -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // PRELOADED ADMIN CREDENTIALS
+    const ADMIN_CREDENTIALS = {
+      username: "admin",
+      password: "admin123"
+    };
+
+    // PRELOADED FFBA PLAYERS DATA
+    const playersData = [
+      { name: "Rahul Sharma", age: 24, level: "Professional", phone: "+91 98765 43210", active: true },
+      { name: "Ananya Roy", age: 19, level: "Beginner", phone: "+91 98123 45678", active: true },
+      { name: "Vikram Singh", age: 29, level: "Professional", phone: "+91 97111 22334", active: false },
+      { name: "Priya Patel", age: 22, level: "Beginner", phone: "+91 96543 21098", active: true },
+      { name: "Amit Kumar", age: 27, level: "Professional", phone: "+91 95432 10987", active: true },
+      { name: "Sneha Reddy", age: 21, level: "Beginner", phone: "+91 94321 09876", active: false }
+    ];
+
+    const loginCard = document.getElementById('loginCard');
+    const adminDashboard = document.getElementById('adminDashboard');
+    const loginForm = document.getElementById('loginForm');
+    const errorMsg = document.getElementById('errorMsg');
+    const playerTableBody = document.getElementById('playerTableBody');
+    const logoutBtn = document.getElementById('logoutBtn');
+    const searchInput = document.getElementById('searchInput');
+
+    // Authentication Handler
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const userEntered = document.getElementById('username').value.trim();
+      const passEntered = document.getElementById('password').value.trim();
+
+      if (userEntered === ADMIN_CREDENTIALS.username && passEntered === ADMIN_CREDENTIALS.password) {
+        loginCard.style.display = 'none';
+        adminDashboard.style.display = 'block';
+        logoutBtn.style.display = 'inline-flex';
+        renderPlayers(playersData);
+      } else {
+        errorMsg.style.display = 'block';
+      }
+    });
+
+    // Logout Handler
+    logoutBtn.addEventListener('click', () => {
+      adminDashboard.style.display = 'none';
+      logoutBtn.style.display = 'none';
+      loginCard.style.display = 'block';
+      loginForm.reset();
+      errorMsg.style.display = 'none';
+    });
+
+    // Real-time Search Filter
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase();
+      const filtered = playersData.filter(p => 
+        p.name.toLowerCase().includes(query) || 
+        p.phone.includes(query) ||
+        p.level.toLowerCase().includes(query)
+      );
+      renderPlayers(filtered);
+    });
+
+    // Dynamic Player Rendering
+    function renderPlayers(data) {
+      playerTableBody.innerHTML = '';
+      
+      if(data.length === 0) {
+        playerTableBody.innerHTML = `
+          <tr>
+            <td colspan="5" style="text-align: center; color: var(--text-muted); padding: 2rem;">
+              No players found matching your search.
+            </td>
+          </tr>`;
+        return;
+      }
+
+      data.forEach(player => {
+        const tr = document.createElement('tr');
+        const isPro = player.level.toLowerCase() === 'professional';
+        
+        const badgeHTML = isPro 
+          ? `<span class="badge badge-pro"><i class="fa-solid fa-trophy"></i> Professional</span>`
+          : `<span class="badge badge-beginner"><i class="fa-solid fa-seedling"></i> Beginner</span>`;
+
+        const statusHTML = player.active 
+          ? `<div class="status-cell status-active"><span class="status-dot"></span> Active</div>`
+          : `<div class="status-cell status-inactive"><span class="status-dot"></span> Inactive</div>`;
+
+        tr.innerHTML = `
+          <td data-label="Player Name"><strong>${player.name}</strong></td>
+          <td data-label="Age">${player.age}</td>
+          <td data-label="Skill Level">${badgeHTML}</td>
+          <td data-label="Contact Number" class="phone-cell"><i class="fa-solid fa-phone"></i> ${player.phone}</td>
+          <td data-label="Status">${statusHTML}</td>
+        `;
+        playerTableBody.appendChild(tr);
+      });
+    }
+  </script>
+
+</body>
+</html>
