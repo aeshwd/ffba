@@ -457,7 +457,7 @@
           <thead>
             <tr>
               <th>Player Name</th>
-              <th>Age</th>
+              
               <th>Skill Level</th>
               <th>Contact Number</th>
               <th>Status</th>
@@ -480,12 +480,20 @@
 
     // PRELOADED FFBA PLAYERS DATA
     const playersData = [
-      { name: "Rahul Sharma", age: 24, level: "Professional", phone: "+91 98765 43210", active: true },
-      { name: "Ananya Roy", age: 19, level: "Beginner", phone: "+91 98123 45678", active: true },
-      { name: "Vikram Singh", age: 29, level: "Professional", phone: "+91 97111 22334", active: false },
-      { name: "Priya Patel", age: 22, level: "Beginner", phone: "+91 96543 21098", active: true },
-      { name: "Amit Kumar", age: 27, level: "Professional", phone: "+91 95432 10987", active: true },
-      { name: "Sneha Reddy", age: 21, level: "Beginner", phone: "+91 94321 09876", active: false }
+      { name: "Vihaan Jindal",  level: "Professional",  active: false },
+      { name: "Aryan Jindal",  level: "Professional",  active: true },
+      { name: "Vaibhav",  level: "Professional",  active: true },
+      { name: "Gurman",  level: "Beginner",  active: true },
+      { name: "Chinmay",  level: "Professional",  active: false },
+      { name: "Vanya",  level: "Beginner",  active: true },
+      { name: "Peehu Mishra",  level: "Professional",  active: true },
+      { name: "Prisha",  level: "Beginner",  active: true },
+      { name: "Prishit",  level: "Beginner",  active: true }
+      { name: "Gurneev",  level: "Professional",  active: true },
+      { name: "Bhavya",  level: "Professional",  active: true },
+      { name: "Sanvi",  level: "Beginner",  active: true },
+      { name: "Suhani",  level: "Beginner",  active: true },
+      { name: "Sukhmehar",  level: "Beginner",  active: true }
     ];
 
     const loginCard = document.getElementById('loginCard');
@@ -560,7 +568,7 @@
 
         tr.innerHTML = `
           <td data-label="Player Name"><strong>${player.name}</strong></td>
-          <td data-label="Age">${player.age}</td>
+          
           <td data-label="Skill Level">${badgeHTML}</td>
           <td data-label="Contact Number" class="phone-cell"><i class="fa-solid fa-phone"></i> ${player.phone}</td>
           <td data-label="Status">${statusHTML}</td>
